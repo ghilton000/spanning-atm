@@ -1,0 +1,41 @@
+<div class="container">
+
+    <div class="view-header text-center">
+
+        <h1>Welcome to McFriendly's Bank<span ng-if="currentUser">, {{currentUser.first}}</span></h1>
+        <h3>How much would you like to withdraw?</h3>
+        <h4>Your available balance is {{currentUser.balance | dollars:2}}</h4>
+    </div>
+
+    <div class="view-body">
+
+        <div class="row top-margin-2em">
+
+            <!-- The amounts are in cents -->
+            <div ng-repeat="amount in [2000,5000,10000,20000,30000]" class="col-xs-12 col-sm-4 col-md-3">
+                <button class="btn btn-success btn-kiosk-2 bottom-margin-1em" ng-click="$ctrl.withdraw(amount)"
+                        ng-disabled="amount > currentUser.balance">
+                    {{amount | dollars:0}}
+                </button>
+            </div>
+
+            <div class="col-xs-12 col-sm-4 col-md-3">
+                <button class="btn btn-success btn-kiosk-2 bottom-margin-1em" ng-click="$ctrl.withdrawOther()">
+                    Other amount
+                </button>
+            </div>
+        </div>
+
+        <div class="row top-margin-1em">
+            <div class="col-xs-12 col-sm-6">
+                <button class="btn btn-primary btn-nav" ng-click="$ctrl.home()">Home</button>
+            </div>
+            <div class="col-xs-12 col-sm-6">
+                <div class="visible-xs top-margin-1em"></div>
+                <button class="btn btn-primary btn-nav" ng-click="$ctrl.done()">Done</button>
+            </div>
+        </div>
+
+    </div>
+
+</div>

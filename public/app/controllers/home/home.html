@@ -1,0 +1,39 @@
+<div class="container">
+
+    <div class="view-header text-center">
+        <h1>Welcome to McFriendly's Bank<span ng-if="currentUser">, {{currentUser.first}}</span></h1>
+        <h3>How can we help you today?</h3>
+        <h4 ng-if="currentUser">Your available balance is {{currentUser.balance | dollars:2}}</h4>
+    </div>
+
+    <div class="view-body">
+
+        <!-- A kiosk doesn't really need to be responsive, but I threw some in just for grins -->
+        <div class="row top-margin-2em">
+
+            <div class="col-xs-12 col-sm-4">
+                <button class="btn btn-success btn-kiosk-1" ng-click="$ctrl.getCash()">Get cash</button>
+            </div>
+
+            <div class="col-xs-12 col-sm-4">
+                <div class="visible-xs top-margin-1em"></div>
+                <button class="btn btn-success btn-kiosk-1" ng-click="$ctrl.deposit()">Deposit</button>
+            </div>
+
+            <div class="col-xs-12 col-sm-4">
+                <div class="visible-xs top-margin-1em"></div>
+                <button class="btn btn-info btn-kiosk-1" ng-click="$ctrl.getBalance()">Check balance</button>
+            </div>
+
+        </div>
+
+        <div ng-if="currentUser" class="row top-margin-1em">
+            <div class="col-xs-12">
+                <div class="hidden-xs top-margin-1em"></div>
+                <button class="btn btn-primary btn-nav" ng-click="$ctrl.done()">Done</button>
+            </div>
+        </div>
+
+    </div>
+
+</div>

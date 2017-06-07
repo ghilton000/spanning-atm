@@ -1,0 +1,38 @@
+<div class="container">
+
+    <div class="view-header text-center">
+
+        <h1>Welcome to McFriendly's Bank<span ng-if="currentUser">, {{currentUser.first}}</span></h1>
+        <h3>Deposit checks and cash</h3>
+        <h4>Your available balance is {{currentUser.balance | dollars:2}}</h4>
+    </div>
+
+    <div class="view-body">
+
+        <div class="row text-center top-margin-1em">
+            <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+                <p>Insert your checks and cash and press the <strong>Scan</strong> button below.<br>
+                    (Of course, you would never have to press a scan button.)</p>
+                <!-- TODO (Notes about how many checks can be deposited at once time, when the balance will be available,
+                    etc.) -->
+            </div>
+        </div>
+
+        <div class="row top-margin-2em">
+            <div class="col-xs-12 col-sm-4 col-sm-offset-4">
+                <button class="btn btn-success btn-kiosk-2" ng-click="$ctrl.scan()">Scan</button>
+                <div class="hidden-xs top-margin-1em"></div>
+            </div>
+            <div class="col-xs-12 col-sm-6">
+                <div class="visible-xs top-margin-1em"></div>
+                <button class="btn btn-primary btn-nav" ng-click="$ctrl.home()">Home</button>
+            </div>
+            <div class="col-xs-12 col-sm-6">
+                <div class="visible-xs top-margin-1em"></div>
+                <button class="btn btn-primary btn-nav" ng-click="$ctrl.done()">Done</button>
+            </div>
+        </div>
+
+    </div>
+
+</div>

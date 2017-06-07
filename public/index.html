@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!-- There are all sorts of things we could do here for cross-browser support. Leaving those out for simplicity. -->
+<html lang="en" ng-app="atm">
+
+    <head>
+
+        <meta charset="utf-8">
+        <title>McFriendly's Bank ATM</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="bower_components/angular-bootstrap/ui-bootstrap-csp.css">
+
+        <!-- In production we would minify this-->
+        <link rel="stylesheet" href="app/app.css">
+
+    </head>
+
+    <body>
+
+        <ui-view><!-- main content gets inserted here by ui-router --></ui-view>
+
+        <script src="bower_components/bluebird/js/browser/bluebird.min.js"></script>
+        <script src="bower_components/angular/angular.min.js"></script>
+        <script src="bower_components/angular-bluebird-promises/dist/angular-bluebird-promises.min.js"></script>
+        <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+        <script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+        <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+        <script src="bower_components/lodash/dist/lodash.min.js"></script>
+
+        <!-- In production we would combine all these into a single file and minify -->
+        <script src="app/app.js"></script>
+        <script src="app/config.js"></script>
+        <script src="app/components/confirm-deposit/confirm-deposit.js"></script>
+        <script src="app/components/notice/notice.js"></script>
+        <script src="app/components/pin/pin.js"></script>
+        <script src="app/controllers/cash/cash.js"></script>
+        <script src="app/controllers/deposit/deposit.js"></script>
+        <script src="app/controllers/home/home.js"></script>
+        <script src="app/filters/dollars.js"></script>
+        <script src="app/services/lodash.js"></script>
+        <script src="app/services/notice.js"></script>
+
+    </body>
+
+</html>
