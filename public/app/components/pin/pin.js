@@ -21,7 +21,7 @@
 
         $ctrl.pin = '';
 
-        // TODO: Look for keystrokes in case the ATM has a physical keypad
+        // TODO: Look for keypress events in case the ATM has a physical keypad
 
         // Called when a digit button is pressed to add a digit to the end of the PIN
         function addDigit(digit) {

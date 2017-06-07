@@ -26,6 +26,7 @@
     margin : 0 auto;
 }
 
+/* This markup is a convenience for using CSS tables rather than HTML tables */
 .display-table {
     display : table;
 }
@@ -46,12 +47,14 @@
     padding          : 0;
 }
 
+/* For HTML tables without the lines. Can be a cleaner look */
 .table-borderless,
 .table-borderless td,
 .table-borderless th {
     border : 0 !important;
 }
 
+/* Use a monospaced font for numbers so they'll line up vertically in a table */
 .text-number {
     font-family : Helvetica, Verdana, 'Courier New', 'Courier', monospace;
 }
@@ -124,12 +127,14 @@
         width   : 100%;
     }
 
+    /* Smaller keypad buttons on XS screens */
     .btn-keypad {
         width  : 75px;
         height : 75px;
         margin : 5px;
     }
 
+    /* We show the number of digits entered for the PIN */
     .masked-pin {
         font-size : 200%;
     }

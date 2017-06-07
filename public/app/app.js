@@ -25,7 +25,7 @@
             $log.warn('Unhandled rejection', ex);
         });
 
-        // Store simulated users in $rootScope for simplicity. Normally, these would live in a database in the server.
+        // Store simulated users in $rootScope for simplicity. Normally, these would live in a database on a server.
         // Normally, the pins/passwords would be hashed and not stored in the clear
         // Balances are in cents
         $rootScope.users = [
